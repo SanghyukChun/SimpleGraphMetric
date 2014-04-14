@@ -1,5 +1,8 @@
-A = loadadj('zachary.txt');
-% A = loadadj('AIDSBlog.txt');
+isDirected = 0;
+A = loadadj('zachary.txt', isDirected);
+
+% isDirected = 1;
+% A = loadadj('AIDSBlog.txt', isDirected);
 
 degrees  = degree(A);
 closcent = closenesscentrality(A);

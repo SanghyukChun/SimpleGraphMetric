@@ -1,4 +1,4 @@
-function [ A ] = loadadj( filename )
+function [ A ] = loadadj( filename, isDirected )
 
 rawData = load(filename);
 numLine = size(rawData,1);
@@ -19,7 +19,11 @@ for iter=1:numLine
         w = 1;
     end
     
-    A(i,j) = A(i,j) + w;
+    A(j,i) = A(j,i) + w;
+    
+    if ~isDirected
+        A(i,j) = A(j,i);
+    end
 end
 
 end
