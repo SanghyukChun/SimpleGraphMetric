@@ -4,7 +4,7 @@ function [ eigncent ] = eigenvectorcentrality( A )
 [V, D] = eig(A);
 [~, i] = max(diag(D));
 
-eigncent = V(:, i);
+eigncent = abs(V(:, i));
 
 end
 
