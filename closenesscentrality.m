@@ -4,6 +4,7 @@ function [ closcent ] = closenesscentrality( A )
 
 numNode = size(A,1);
 closcent = zeros(numNode,1);
+A = A > 0;
 sparseA = sparse(A);
 
 for node=1:numNode
