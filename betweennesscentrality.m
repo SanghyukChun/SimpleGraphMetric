@@ -9,6 +9,7 @@ A = A > 0;
 for node=1:numNode
     for otherNode=1:numNode
         [ numAllPath, numPathIncludeNode ] = findshortestpaths(A,node,otherNode);
+        disp([num2str(node), ' ' num2str(otherNode)]);
         if numAllPath ~= 0
             betwcent(node) = betwcent(node) + numPathIncludeNode / numAllPath;
         end
