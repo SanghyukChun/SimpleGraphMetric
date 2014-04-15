@@ -1,4 +1,5 @@
 function [ A ] = loadadj( filename, isDirected )
+% build adjacency matrix from text file
 
 rawData = load(filename);
 numLine = size(rawData,1);

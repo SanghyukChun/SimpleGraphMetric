@@ -1,6 +1,6 @@
 function [ eigncent ] = eigenvectorcentrality( A )
-%EIGENVECTORCENTRALITY Summary of this function goes here
-%   Detailed explanation goes here
+% eigenvector centrality. compute eigenvector using eig function
+
 [V, D] = eig(A);
 [~, i] = max(diag(D));
 

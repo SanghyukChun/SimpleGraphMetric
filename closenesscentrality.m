@@ -1,6 +1,6 @@
 function [ closcent ] = closenesscentrality( A )
-%CLOSENESSCENTRALITY Summary of this function goes here
-%   Detailed explanation goes here
+% closeness centrality. compute shortest path length using
+% graphshortestpath algorithm (using dijkstra)
 
 numNode = size(A,1);
 closcent = zeros(numNode,1);
